@@ -45,7 +45,7 @@ namespace API.Controllers
                .Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
 
                  return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex, 
-                 productParams.PagesSize, totalItems, data));
+                 productParams.PageSize, totalItems, data));
         }
 
         [HttpGet("{id}")]
