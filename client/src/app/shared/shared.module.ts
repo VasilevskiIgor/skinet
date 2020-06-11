@@ -1,23 +1,45 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginationModule } from 'node_modules/ngx-bootstrap/pagination';
+import { BsDropdownModule } from 'node_modules/ngx-bootstrap/dropdown';
 import { CarouselModule } from 'node_modules/ngx-bootstrap/carousel';
 import { PagingHeaderComponent } from './components/paging-header/paging-header.component';
 import { PagerComponent } from './components/pager/pager.component';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { CdkStepperModule } from '@angular/cdk/stepper';
+import { StepperComponent } from './components/stepper/stepper.component';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 @NgModule({
-  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent],
+  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, StepperComponent, TextInputComponent],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    ReactiveFormsModule,
+    CdkStepperModule,
+
+
   ],
-  exports: [PaginationModule,
-  PagingHeaderComponent,
-  PagerComponent,
-  CarouselModule,
-  OrderTotalsComponent
+  exports: [
+    PaginationModule,
+    PagingHeaderComponent,
+    PagerComponent,
+    CarouselModule,
+    OrderTotalsComponent,
+    ReactiveFormsModule,
+    BsDropdownModule,
+    TextInputComponent,
+    CdkStepperModule,
+    StepperComponent
   ]
+
 })
 export class SharedModule { }
+
+
+
+
