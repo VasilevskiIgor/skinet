@@ -12,8 +12,9 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { TextInputComponent } from './components/text-input/text-input.component';
 
+
 @NgModule({
-  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, StepperComponent, TextInputComponent],
+  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, StepperComponent, TextInputComponent ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
@@ -32,14 +33,11 @@ import { TextInputComponent } from './components/text-input/text-input.component
     OrderTotalsComponent,
     ReactiveFormsModule,
     BsDropdownModule,
-    TextInputComponent,
     CdkStepperModule,
-    StepperComponent
+    StepperComponent,
+    TextInputComponent
   ]
 
 })
 export class SharedModule { }
-
-
-
 
