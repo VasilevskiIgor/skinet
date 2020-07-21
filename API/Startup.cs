@@ -80,8 +80,6 @@ namespace API
 
             app.UseAuthorization();
 
-            app.UseAuthorization();
-
             app.UseSwaggerDocumention();
 
             app.UseEndpoints(endpoints =>
