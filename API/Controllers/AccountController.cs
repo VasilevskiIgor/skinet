@@ -116,8 +116,5 @@ namespace API.Controllers
                 Email = user.Email
             };
         }
-
-
-        
     }
 }

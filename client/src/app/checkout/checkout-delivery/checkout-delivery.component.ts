@@ -22,4 +22,9 @@ export class CheckoutDeliveryComponent implements OnInit {
       console.log(error);
     });
   }
+
+  setShippingPrice(deliveryMethod: IDeliveryMethod) {
+    this.basketService.setShippingPrice(deliveryMethod);
+  }
+
 }

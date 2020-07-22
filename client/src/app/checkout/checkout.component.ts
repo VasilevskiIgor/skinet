@@ -19,23 +19,23 @@ export class CheckoutComponent implements OnInit {
 
   createCheckoutForm() {
     this.checkoutForm = this.fb.group({
-        addressForm: this.fb.group({
-          firstName: [null, Validators.required],
-          lastName: [null, Validators.required],
-          street: [null, Validators.required],
-          city: [null, Validators.required],
-          state: [null, Validators.required],
-          zipcode: [null, Validators.required],
-
-        }),
-        deliveryForm: this.fb.group({
-          deliveryForm: [null, Validators.required]
-        }),
-        paymentForm: this.fb.group({
-          nameOnCard: [null, Validators.required]
-        })
+      addressForm: this.fb.group({
+        firstName: [null, Validators.required],
+        lastName: [null, Validators.required],
+        street: [null, Validators.required],
+        city: [null, Validators.required],
+        state: [null, Validators.required],
+        zipcode: [null, Validators.required],
+      }),
+      deliveryForm: this.fb.group({
+        deliveryMethod: [null, Validators.required]
+      }),
+      paymentForm: this.fb.group({
+        nameOnCard: [null, Validators.required]
+      })
     });
   }
+
   getAddressFormValues() {
     this.accountService.getUserAddress().subscribe(address => {
       if (address) {
@@ -47,4 +47,3 @@ export class CheckoutComponent implements OnInit {
   }
 
 }
-
