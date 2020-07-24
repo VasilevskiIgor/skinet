@@ -54,10 +54,11 @@ namespace API
             options.AddPolicy(name: MyAllowSpecificOrigins,
                               builder =>
                               {
-                                  builder.WithOrigins("http://localhost:4200").AllowAnyHeader();
+                                builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod();
                               });
         });
-
+                // services.AddResponseCaching();
+        services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

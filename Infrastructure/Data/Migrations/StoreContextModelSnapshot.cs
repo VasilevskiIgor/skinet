@@ -14,7 +14,7 @@ namespace Infrastructure.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.2");
+                .HasAnnotation("ProductVersion", "3.1.3");
 
             modelBuilder.Entity("Core.Entities.OrderAggregate.DeliveryMethod", b =>
                 {
@@ -51,8 +51,8 @@ namespace Infrastructure.Data.Migrations
                     b.Property<int?>("DeliveryMethodId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTimeOffset>("OrderDate")
-                        .HasColumnType("TEXT");
+                    b.Property<long>("OrderDate")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PaymentIntentedId")
                         .HasColumnType("TEXT");
@@ -204,7 +204,7 @@ namespace Infrastructure.Data.Migrations
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.OwnsOne("Core.Entities.OrderAggregate.ProductItemOrdered", "itemOrdered", b1 =>
+                    b.OwnsOne("Core.Entities.OrderAggregate.ProductItemOrdered", "ItemOrdered", b1 =>
                         {
                             b1.Property<int>("OrderItemId")
                                 .HasColumnType("INTEGER");
@@ -215,7 +215,7 @@ namespace Infrastructure.Data.Migrations
                             b1.Property<int>("ProductItemId")
                                 .HasColumnType("INTEGER");
 
-                            b1.Property<string>("ProductNmae")
+                            b1.Property<string>("ProductName")
                                 .HasColumnType("TEXT");
 
                             b1.HasKey("OrderItemId");
