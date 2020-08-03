@@ -23,6 +23,7 @@ import { RouterModule } from '@angular/router';
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
     ReactiveFormsModule,
+    FormsModule,
     CdkStepperModule,
     RouterModule
 
@@ -37,6 +38,7 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     BsDropdownModule,
     CdkStepperModule,
+    FormsModule,
     StepperComponent,
     TextInputComponent,
     BasketSummaryComponent
